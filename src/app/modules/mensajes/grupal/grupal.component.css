@@ -30,7 +30,8 @@ div.left + div.left div.boxName {
   display: none;
 }
 
-div.right + div.right {
+div.right + div.right,
+div.left + div.left {
   padding-top: 2px !important;
 }
 
@@ -40,7 +41,14 @@ div.right + div.right div.contentRight {
   margin-top: 0 !important;
 }
 
-div.right + div.right div.contentRight {
+div.left + div.left div.contentMessage,
+div.left + div.left div.contentLeft {
+  margin-left: 12%;
+  margin-top: 0 !important;
+}
+
+div.right + div.right div.contentRight,
+div.left + div.left div.contentRight {
   margin-top: 0 !important;
 }
 
