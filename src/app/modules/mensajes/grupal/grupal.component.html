@@ -27,7 +27,7 @@
       <div
         [style.background-color]="mensaje.colorCharacter"
         style="
-          padding: 4%;
+          padding: 20px;
           margin-top: 10px;
           border-radius: 15px;
           width: fit-content;
@@ -52,7 +52,8 @@
       <div
         class="boxName"
         [ngClass]="{
-          show: test[i - 1] != undefined && test[i - 1].idUser != test[i].idUser,
+          show:
+            test[i - 1] != undefined && test[i - 1].idUser != test[i].idUser,
           hide: test[i - 1] != undefined && test[i - 1].idUser == test[i].idUser
         }"
       >
@@ -64,7 +65,7 @@
       <div
         [style.background-color]="mensaje.colorCharacter"
         style="
-          padding: 5%;
+          padding: 20px;
           margin-top: 10px;
           border-radius: 15px;
           width: fit-content;
