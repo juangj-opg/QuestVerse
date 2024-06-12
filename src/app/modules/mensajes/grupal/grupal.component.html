@@ -34,7 +34,7 @@
           font-family: math;
         "
         class="contentMessage"
-        [innerHtml]="mensaje.message"
+        [innerHtml]="mensaje.message.replaceAll('\n', '<br>')"
       ></div>
     </div>
 
@@ -65,7 +65,7 @@
           font-family: math;
         "
         class="contentLeft"
-        [innerHtml]="mensaje.message"
+        [innerHtml]="mensaje.message.replaceAll('\n', '<br>')"
       ></div>
     </div>
   </div>

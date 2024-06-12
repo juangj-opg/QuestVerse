@@ -15,4 +15,15 @@ div#content {
   padding: 0 5% 65px 5%;
 }
 
+/* Chats */
+
+code {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+/* Fin Chats */
+
 /* Fin Contenido */
