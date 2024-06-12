@@ -1,0 +1,72 @@
+<div id="header">titulo xd</div>
+<div id="conversaciones">
+  <div
+    *ngFor="let mensaje of test"
+    [ngClass]="{
+      right: mensaje.idUser == idLogged,
+      left: mensaje.idUser != idLogged
+    }"
+  >
+    <div
+      style="
+        display: flex;
+        margin-right: 2%;
+        margin-top: 5px;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+      "
+      class="contentRight"
+    >
+      <div class="boxName">
+        <span *ngIf="mensaje.estaRoleando"
+          >{{ mensaje.characterName }} - {{ mensaje.username }}
+        </span>
+        <span *ngIf="!mensaje.estaRoleando">{{ mensaje.username }} </span>
+      </div>
+      <div
+        [style.background-color]="mensaje.colorCharacter"
+        style="
+          padding: 4%;
+          margin-top: 10px;
+          border-radius: 15px;
+          width: fit-content;
+          font-family: math;
+        "
+        class="contentMessage"
+        [innerHtml]="mensaje.message"
+      ></div>
+    </div>
+
+    <img
+      src="{{ mensaje.urlCharacterImage }}"
+      width="12%"
+      height="100%"
+      style="border-radius: 20px"
+    />
+
+    <div
+      style="margin-left: 2%; margin-top: 5px; width: 100%"
+      class="contentLeft"
+    >
+      <div class="boxName">
+        <span *ngIf="mensaje.estaRoleando"
+          >{{ mensaje.characterName }} - {{ mensaje.username }}
+        </span>
+        <span *ngIf="!mensaje.estaRoleando">{{ mensaje.username }} </span>
+      </div>
+      <div
+        [style.background-color]="mensaje.colorCharacter"
+        style="
+          padding: 5%;
+          margin-top: 10px;
+          border-radius: 15px;
+          width: fit-content;
+          font-family: math;
+        "
+        class="contentLeft"
+        [innerHtml]="mensaje.message"
+      ></div>
+    </div>
+  </div>
+</div>

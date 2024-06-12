@@ -1,0 +1,18 @@
+/* Diseño general de la página */
+html,
+body {
+  background-color: #2e2e2e;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+/* Fin Diseño */
+
+/* Contenido */
+
+div#content {
+  padding: 0 5% 65px 5%;
+}
+
+/* Fin Contenido */
