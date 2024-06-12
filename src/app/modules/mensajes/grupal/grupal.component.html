@@ -1,7 +1,7 @@
 <div id="header">titulo xd</div>
 <div id="conversaciones">
   <div
-    *ngFor="let mensaje of test"
+    *ngFor="let mensaje of test; index as i"
     [ngClass]="{
       right: mensaje.idUser == idLogged,
       left: mensaje.idUser != idLogged
@@ -37,14 +37,14 @@
         [innerHtml]="mensaje.message.replaceAll('\n', '<br>')"
       ></div>
     </div>
-
     <img
       src="{{ mensaje.urlCharacterImage }}"
       width="12%"
       height="100%"
       style="border-radius: 20px"
       [ngClass]="{
-        show: true,
+        show: test[i - 1] != undefined && test[i - 1].idUser != test[i].idUser,
+        hide: test[i - 1] != undefined && test[i - 1].idUser == test[i].idUser
       }"
     />
 
@@ -52,7 +52,8 @@
       <div
         class="boxName"
         [ngClass]="{
-          show: true,
+          show: test[i - 1] != undefined && test[i - 1].idUser != test[i].idUser,
+          hide: test[i - 1] != undefined && test[i - 1].idUser == test[i].idUser
         }"
       >
         <span *ngIf="mensaje.estaRoleando"
@@ -69,7 +70,7 @@
           width: fit-content;
           font-family: math;
         "
-        class="contentLeft"
+        class="contentMessage"
         [innerHtml]="mensaje.message.replaceAll('\n', '<br>')"
       ></div>
     </div>

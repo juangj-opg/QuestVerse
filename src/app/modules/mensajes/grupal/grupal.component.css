@@ -47,8 +47,8 @@ div.right + div.right div.contentRight {
   margin-top: 0 !important;
 }
 
-div.left:not(div.show) + div.left:not(div.show) div.contentMessage,
-div.left:not(div.show) + div.left:not(div.show) div.contentLeft {
+div.left + div.left div.contentMessage,
+div.left + div.left div.contentLeft {
   margin-left: 12%;
   margin-top: 0;
 }
@@ -76,6 +76,14 @@ div.left {
   display: block !important;
 }
 
-.show + .contentLeft {
-  margin-top: 10px !important;
+.hide + .contentLeft {
+  margin-top: 0px !important;
+}
+
+.show + .contentMessage {
+  margin-left: 0% !important;
+}
+
+.hide {
+  display: none !important;
 }
