@@ -15,6 +15,12 @@ div:has(div.right) {
   margin-left: auto;
 }
 
+.contentLeft {
+  margin-left: 2%;
+  margin-top: 5px;
+  width: 100%;
+}
+
 div.right {
   display: flex;
   flex-direction: row;
@@ -41,15 +47,19 @@ div.right + div.right div.contentRight {
   margin-top: 0 !important;
 }
 
-div.left + div.left div.contentMessage,
-div.left + div.left div.contentLeft {
+div.left:not(div.show) + div.left:not(div.show) div.contentMessage,
+div.left:not(div.show) + div.left:not(div.show) div.contentLeft {
   margin-left: 12%;
-  margin-top: 0 !important;
+  margin-top: 0;
 }
 
 div.right + div.right div.contentRight,
 div.left + div.left div.contentRight {
   margin-top: 0 !important;
+}
+
+div.left:not(div.show) div.contentLeft {
+  margin-left: 1% !important;
 }
 
 div.left div.contentRight,
@@ -60,4 +70,12 @@ div.right div.contentLeft {
 div.left {
   display: flex;
   flex-direction: row;
+}
+
+.show {
+  display: block !important;
+}
+
+.show + .contentLeft {
+  margin-top: 10px !important;
 }
