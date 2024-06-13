@@ -522,6 +522,36 @@ Listo. Ten cuidado con esto Cott, puede que te empieces a sentir raro. Bueno, es
       colorCharacter: '#781042',
       message: `Mensaje de prueba`,
     },
+    {
+      idMessage: 31,
+      idUser: 3,
+      username: 'Nube',
+      estaRoleando: true,
+      characterName: 'Darki',
+      urlCharacterImage: '/assets/iconCharacters/darki.png',
+      colorCharacter: '#753776',
+      message: `Mensaje de prueba`,
+    },
+    {
+      idMessage: 32,
+      idUser: 2,
+      username: 'Pan',
+      estaRoleando: true,
+      characterName: 'Cotton',
+      urlCharacterImage: '/assets/iconCharacters/cotton.png',
+      colorCharacter: '#781042',
+      message: `Mensaje de prueba`,
+    },
+    {
+      idMessage: 33,
+      idUser: 3,
+      username: 'Nube',
+      estaRoleando: true,
+      characterName: 'Darki',
+      urlCharacterImage: '/assets/iconCharacters/darki.png',
+      colorCharacter: '#753776',
+      message: `Mensaje de prueba`,
+    },
   ];
 
   idLogged: number = 1;

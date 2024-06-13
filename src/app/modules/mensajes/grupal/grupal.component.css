@@ -1,4 +1,16 @@
+div#contentGrupal {
+  padding-bottom: 65px;
+}
+
 @media only screen and (max-width: 768px) {
+}
+
+div.contentMessage {
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 15px;
+  width: fit-content;
+  font-family: math;
 }
 
 div#conversaciones {
@@ -53,11 +65,15 @@ div.left + div.left div.contentLeft {
   margin-top: 0;
 }
 
-div.right + div.right div.contentRight,
+div.show + div.contentMessage {
+  margin-top: 10px !important;
+}
+
 div.left + div.left div.contentRight {
   margin-top: 0 !important;
 }
 
+div.right + div.right div.contentRight,
 div.left:not(div.show) div.contentLeft {
   margin-left: 1% !important;
 }
